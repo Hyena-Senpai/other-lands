@@ -15,8 +15,6 @@
 */
 #define USE_PROFILER
 
-
-
 /**
  * Avoids code that may be compiled differently between builds, such as using `__DATE__`, `__TIME__`, `__FILE__`, or `__LINE__`.
  */

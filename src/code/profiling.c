@@ -48,7 +48,7 @@ void profiler_update(enum ProfilerTime which) {
         diff -= cur_preempted_time;
         start += cur_preempted_time;
     }
-
+    
     buffer_update(cur_data, diff, profile_buffer_index);
     prev_time = cur_time;
 }
@@ -121,7 +121,7 @@ static void update_rdp_timers() {
     u32 tmem = IO_READ(DPC_TMEM_REG);
     u32 cmd =  IO_READ(DPC_BUFBUSY_REG);
     u32 pipe = IO_READ(DPC_PIPEBUSY_REG);
-
+    
     if (myTimer <= 5) myTimer++;
     else {
         IO_WRITE(DPC_STATUS_REG, (DPC_CLR_CLOCK_CTR | DPC_CLR_CMD_CTR | DPC_CLR_PIPE_CTR | DPC_CLR_TMEM_CTR));
