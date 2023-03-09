@@ -512,3 +512,6 @@ void EnBombf_Draw(Actor* thisx, PlayState* play) {
 
     CLOSE_DISPS(play->state.gfxCtx, "../z_en_bombf.c", 1063);
 }
+
+
+//ddeez

@@ -1449,6 +1449,7 @@ s32 Camera_Normal1(Camera* camera) {
     Normal1ReadWriteData* rwData = &camera->paramData.norm1.rwData;
     f32 playerHeight;
     f32 rate = 0.1f;
+    
 
     playerHeight = Player_GetHeight(camera->player);
     if (RELOAD_PARAMS(camera) || R_RELOAD_CAM_PARAMS) {

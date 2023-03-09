@@ -475,6 +475,9 @@ void Graph_ThreadEntry(void* arg0) {
         GameState_Init(gameState, ovl->init, &gfxCtx);
 
         while (GameState_IsRunning(gameState)) {
+#ifdef USE_PROFILER
+            profiler_frame_setup();
+#endif
             Graph_Update(&gfxCtx, gameState);
         }
 

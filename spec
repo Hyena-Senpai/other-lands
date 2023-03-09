@@ -553,6 +553,7 @@ beginseg
     include_data_with_rodata "build/src/code/z_message_PAL.o"
     include "build/src/code/z_game_over.o"
     include "build/src/code/z_construct.o"
+    include "build/src/code/profiling.o"
     include "build/data/audio_tables.rodata.o"
     include "build/data/rsp.text.o"
     include "build/data/rsp.rodata.o"
@@ -574,13 +575,11 @@ beginseg
     include "build/src/overlays/gamestates/ovl_title/ovl_title_reloc.o"
 endseg
 
-#ifdef ENABLE_MAP_SELECT
 beginseg
     name "ovl_select"
     include "build/src/overlays/gamestates/ovl_select/z_select.o"
     include "build/src/overlays/gamestates/ovl_select/ovl_select_reloc.o"
 endseg
-#endif
 
 beginseg
     name "ovl_opening"
@@ -11740,7 +11739,6 @@ beginseg
     number 3
 endseg
 
-#ifdef INCLUDE_TEST_SCENES
 beginseg
     name "besitu_room_0"
     compress
@@ -11916,4 +11914,43 @@ beginseg
     include "build/assets/scenes/test_levels/besitu/besitu_scene.o"
     number 2
 endseg
-#endif
+
+beginseg
+    name "hub_scene"
+    compress
+    romalign 0x1000
+    include "build/assets/scenes/overworld/hub/hub_scene.o"
+    number 2
+endseg
+
+beginseg
+    name "hub_room_0"
+    compress
+    romalign 0x1000
+    include "build/assets/scenes/overworld/hub/hub_room_0.o"
+    number 3
+endseg
+
+beginseg
+    name "field_a_scene"
+    compress
+    romalign 0x1000
+    include "build/assets/scenes/overworld/field_a/field_a_scene.o"
+    number 2
+endseg
+
+beginseg
+    name "field_a_room_0"
+    compress
+    romalign 0x1000
+    include "build/assets/scenes/overworld/field_a/field_a_room_0.o"
+    number 3
+endseg
+
+beginseg
+    name "field_a_room_1"
+    compress
+    romalign 0x1000
+    include "build/assets/scenes/overworld/field_a/field_a_room_1.o"
+    number 3
+endseg

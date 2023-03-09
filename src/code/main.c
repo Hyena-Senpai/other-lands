@@ -2,6 +2,7 @@
 #include "terminal.h"
 
 #include "config.h"
+#include "profiling.h"
 
 #ifdef ENABLE_WIDESCREEN
 u8 gIsUsingWidescreen = false;

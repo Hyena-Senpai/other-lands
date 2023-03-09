@@ -2332,7 +2332,7 @@ void func_80833DF8(Player* this, PlayState* play) {
         }
 
         for (i = 0; i < ARRAY_COUNT(D_80854388); i++) {
-            if (CHECK_BTN_ALL(sControlInput->press.button, D_80854388[i])) {
+            if (CHECK_BTN_ALL(sControlInput->press.button, D_80854388[0])) {
                 break;
             }
         }
@@ -2340,7 +2340,7 @@ void func_80833DF8(Player* this, PlayState* play) {
         item = func_80833CDC(play, i);
         if (item >= ITEM_NONE_FE) {
             for (i = 0; i < ARRAY_COUNT(D_80854388); i++) {
-                if (CHECK_BTN_ALL(sControlInput->cur.button, D_80854388[i])) {
+                if (CHECK_BTN_ALL(sControlInput->cur.button, D_80854388[0])) {
                     break;
                 }
             }
@@ -6535,7 +6535,7 @@ s32 func_8083EAF0(Player* this, Actor* actor) {
 
 s32 func_8083EB44(Player* this, PlayState* play) {
     if ((this->stateFlags1 & PLAYER_STATE1_11) && (this->heldActor != NULL) &&
-        CHECK_BTN_ANY(sControlInput->press.button, BTN_A | BTN_B | BTN_CLEFT | BTN_CRIGHT | BTN_CDOWN)) {
+        CHECK_BTN_ANY(sControlInput->press.button, BTN_A | BTN_B )) {
         if (!func_80835644(play, this, this->heldActor)) {
             if (!func_8083EAF0(this, this->heldActor)) {
                 func_80835C58(play, this, func_808464B0, 1);
@@ -8563,7 +8563,7 @@ void func_8084411C(Player* this, PlayState* play) {
             Actor* heldActor = this->heldActor;
 
             if (!func_80835644(play, this, heldActor) && (heldActor->id == ACTOR_EN_NIW) &&
-                CHECK_BTN_ANY(sControlInput->press.button, BTN_A | BTN_B | BTN_CLEFT | BTN_CRIGHT | BTN_CDOWN)) {
+                CHECK_BTN_ANY(sControlInput->press.button, BTN_A | BTN_B )) {
                 func_8084409C(play, this, this->speedXZ + 2.0f, this->actor.velocity.y + 2.0f);
             }
         }

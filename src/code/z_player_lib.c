@@ -162,9 +162,9 @@ Gfx* sPlayerRightHandShieldDLs[PLAYER_SHIELD_MAX * 4] = {
     gLinkChildRightHandClosedFarDL,
     // PLAYER_SHIELD_DEKU
     gLinkAdultRightHandClosedNearDL,
-    gLinkChildRightFistAndDekuShieldNearDL,
+    gLinkChildRightFistAndNewShieldNearDL,
     gLinkAdultRightHandClosedFarDL,
-    gLinkChildRightFistAndDekuShieldFarDL,
+    gLinkChildRightFistAndNewShieldNearDL,
     // PLAYER_SHIELD_HYLIAN
     gLinkAdultRightHandHoldingHylianShieldNearDL,
     gLinkChildRightHandClosedNearDL,
@@ -185,9 +185,9 @@ Gfx* D_80125D28[(PLAYER_SHIELD_MAX + 2) * 4] = {
     gLinkChildSwordAndSheathFarDL,
     // PLAYER_SHIELD_DEKU
     gLinkAdultMasterSwordAndSheathNearDL,
-    gLinkChildDekuShieldSwordAndSheathNearDL,
+    gLinkChildNewShieldSwordAndSheathNearDL,
     gLinkAdultMasterSwordAndSheathFarDL,
-    gLinkChildDekuShieldSwordAndSheathFarDL,
+    gLinkChildNewShieldSwordAndSheathNearDL,
     // PLAYER_SHIELD_HYLIAN
     gLinkAdultHylianShieldSwordAndSheathNearDL,
     gLinkChildHylianShieldSwordAndSheathNearDL,
@@ -280,7 +280,7 @@ Gfx* sPlayerLeftHandSwordDLs2[] = {
 
 Gfx* sPlayerLeftHandSwordDLs[] = {
     gLinkAdultLeftHandHoldingMasterSwordNearDL,
-    gLinkChildLeftFistAndKokiriSwordNearDL,
+    gLinkChildLeftFistAndNewSwordNearDL,
     gLinkAdultLeftHandHoldingMasterSwordFarDL,
     gLinkChildLeftFistAndKokiriSwordFarDL,
 };

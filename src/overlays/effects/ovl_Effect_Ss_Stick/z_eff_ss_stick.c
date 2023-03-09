@@ -76,3 +76,5 @@ void EffectSsStick_Draw(PlayState* play, u32 index, EffectSs* this) {
 
 void EffectSsStick_Update(PlayState* play, u32 index, EffectSs* this) {
 }
+
+//ligma

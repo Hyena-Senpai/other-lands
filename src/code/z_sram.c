@@ -490,9 +490,9 @@ void Sram_OpenSave(SramContext* sramCtx) {
         default:
             if (gSaveContext.savedSceneId != SCENE_LINKS_HOUSE) {
                 gSaveContext.entranceIndex =
-                    (LINK_AGE_IN_YEARS == YEARS_CHILD) ? ENTR_LINKS_HOUSE_0 : ENTR_TEMPLE_OF_TIME_7;
+                    (LINK_AGE_IN_YEARS == YEARS_CHILD) ? ENTR_HUB_0 : ENTR_TEMPLE_OF_TIME_7;
             } else {
-                gSaveContext.entranceIndex = ENTR_LINKS_HOUSE_0;
+                gSaveContext.entranceIndex = ENTR_HUB_0;
             }
             break;
     }

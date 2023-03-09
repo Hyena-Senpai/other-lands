@@ -11,6 +11,13 @@
  */
 
 /**
+ * Enable custom profiler
+*/
+#define USE_PROFILER
+
+
+
+/**
  * Avoids code that may be compiled differently between builds, such as using `__DATE__`, `__TIME__`, `__FILE__`, or `__LINE__`.
  */
 // #define DETERMINISTIC_BUILD
@@ -23,7 +30,7 @@
 /**
  * Options for booting directly into a scene, the map select or the file select, instead of the title screen.
  */
-// #define BOOT_TO_SCENE
+#define BOOT_TO_SCENE
 // #define BOOT_TO_SCENE_NEW_GAME_ONLY
 // #define BOOT_TO_FILE_SELECT
 // #define BOOT_TO_MAP_SELECT
@@ -35,13 +42,13 @@
 // #define MAP_SELECT_ON_FILE_1
 
 // Change these if using `BOOT_TO_SCENE`, `BOOT_TO_SCENE_NEW_GAME_ONLY` or `BOOT_TO_MAP_SELECT`
-#define BOOT_ENTRANCE ENTR_DEKU_TREE_0
+#define BOOT_ENTRANCE ENTR_FIELD_A_0
 #define BOOT_AGE LINK_AGE_CHILD
-#define BOOT_CUTSCENE 0x0000
+#define BOOT_CUTSCENE 0xFFEF
 
 // Change these if using `BOOT_TO_SCENE` or `BOOT_TO_SCENE_NEW_GAME_ONLY`
 #define BOOT_TIME NEXT_TIME_NONE
-#define BOOT_PLAYER_NAME 0x15, 0x12, 0x17, 0x14, 0x3E, 0x3E, 0x3E, 0x3E // "LINK"
+#define BOOT_PLAYER_NAME 0x15, 0x2C, 0x31, 0x2E, 0x3E, 0x3E, 0x3E, 0x3E
 
 /**
  * Enable/Disable BGM on Map Select

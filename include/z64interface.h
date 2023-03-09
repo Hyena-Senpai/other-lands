@@ -32,22 +32,22 @@ extern u8 _icon_item_24_staticSegmentRomStart[];
 /**
  * Button HUD Positions (Upper Left)
  */
-#define A_BUTTON_X 186
-#define A_BUTTON_Y 9
+#define A_BUTTON_X 251
+#define A_BUTTON_Y 34
 
-#define B_BUTTON_X 160
-#define B_BUTTON_Y 17
+#define B_BUTTON_X 229
+#define B_BUTTON_Y 18
 
-#define C_LEFT_BUTTON_X 227
-#define C_LEFT_BUTTON_Y 18
+//#define C_LEFT_BUTTON_X 227
+//#define C_LEFT_BUTTON_Y 18
 
-#define C_DOWN_BUTTON_X 249
-#define C_DOWN_BUTTON_Y 34
+//#define C_DOWN_BUTTON_X 249
+//#define C_DOWN_BUTTON_Y 34
 
-#define C_RIGHT_BUTTON_X 271
-#define C_RIGHT_BUTTON_Y 18
+//#define C_RIGHT_BUTTON_X 271
+//#define C_RIGHT_BUTTON_Y 18
 
-#define C_UP_BUTTON_X 254
+#define C_UP_BUTTON_X 207
 #define C_UP_BUTTON_Y 16
 
 /**

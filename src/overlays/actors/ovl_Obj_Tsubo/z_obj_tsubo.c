@@ -340,3 +340,6 @@ void ObjTsubo_Update(Actor* thisx, PlayState* play) {
 void ObjTsubo_Draw(Actor* thisx, PlayState* play) {
     Gfx_DrawDListOpa(play, D_80BA1B84[(thisx->params >> 8) & 1]);
 }
+
+
+//notes for holdable objects

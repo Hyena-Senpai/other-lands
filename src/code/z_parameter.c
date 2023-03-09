@@ -2957,63 +2957,7 @@ void Interface_DrawItemIconTexture(PlayState* play, void* texture, s16 button) {
 }
 
 void Interface_DrawAmmoCount(PlayState* play, s16 button, s16 alpha) {
-    s16 i;
-    s16 ammo;
-
-    OPEN_DISPS(play->state.gfxCtx, "../z_parameter.c", 3105);
-
-    i = gSaveContext.equips.buttonItems[button];
-
-    if ((i == ITEM_DEKU_STICK) || (i == ITEM_DEKU_NUT) || (i == ITEM_BOMB) || (i == ITEM_BOW) ||
-        ((i >= ITEM_BOW_FIRE) && (i <= ITEM_BOW_LIGHT)) || (i == ITEM_SLINGSHOT) || (i == ITEM_BOMBCHU) ||
-        (i == ITEM_MAGIC_BEAN)) {
-
-        if ((i >= ITEM_BOW_FIRE) && (i <= ITEM_BOW_LIGHT)) {
-            i = ITEM_BOW;
-        }
-
-        ammo = AMMO(i);
-
-        gDPPipeSync(OVERLAY_DISP++);
-
-        if ((button == 0) && (gSaveContext.minigameState == 1)) {
-            ammo = play->interfaceCtx.hbaAmmo;
-        } else if ((button == 0) && (play->shootingGalleryStatus > 1)) {
-            ammo = play->shootingGalleryStatus - 1;
-        } else if ((button == 0) && (play->sceneId == SCENE_BOMBCHU_BOWLING_ALLEY) && Flags_GetSwitch(play, 0x38)) {
-            ammo = play->bombchuBowlingStatus;
-            if (ammo < 0) {
-                ammo = 0;
-            }
-        } else if (((i == ITEM_BOW) && (AMMO(i) == CUR_CAPACITY(UPG_QUIVER))) ||
-                   ((i == ITEM_BOMB) && (AMMO(i) == CUR_CAPACITY(UPG_BOMB_BAG))) ||
-                   ((i == ITEM_SLINGSHOT) && (AMMO(i) == CUR_CAPACITY(UPG_BULLET_BAG))) ||
-                   ((i == ITEM_DEKU_STICK) && (AMMO(i) == CUR_CAPACITY(UPG_DEKU_STICKS))) ||
-                   ((i == ITEM_DEKU_NUT) && (AMMO(i) == CUR_CAPACITY(UPG_DEKU_NUTS))) ||
-                   ((i == ITEM_BOMBCHU) && (ammo == 50)) || ((i == ITEM_MAGIC_BEAN) && (ammo == 15))) {
-            gDPSetPrimColor(OVERLAY_DISP++, 0, 0, 120, 255, 0, alpha);
-        }
-
-        if (ammo == 0) {
-            gDPSetPrimColor(OVERLAY_DISP++, 0, 0, 100, 100, 100, alpha);
-        }
-
-        for (i = 0; ammo >= 10; i++) {
-            ammo -= 10;
-        }
-
-        if (i != 0) {
-            OVERLAY_DISP = Gfx_TextureIA8(OVERLAY_DISP, ((u8*)gAmmoDigit0Tex + ((8 * 8) * i)), 8, 8,
-                WIDE_INCR(R_ITEM_AMMO_X(button), btnPosXShifts[button]), R_ITEM_AMMO_Y(button),
-                WIDE_INCR(8, btnPosXShifts[button]), 8, 1 << 10, 1 << 10);
-        }
-
-        OVERLAY_DISP = Gfx_TextureIA8(OVERLAY_DISP, ((u8*)gAmmoDigit0Tex + ((8 * 8) * ammo)), 8, 8,
-            WIDE_INCR((R_ITEM_AMMO_X(button) + 6), btnPosXShifts[button] - WIDE_GET_4_3),
-            R_ITEM_AMMO_Y(button), WIDE_INCR(8, btnPosXShifts[button]), 8, 1 << 10, 1 << 10);
-    }
-
-    CLOSE_DISPS(play->state.gfxCtx, "../z_parameter.c", 3158);
+    0;
 }
 
 void Interface_DrawActionButton(PlayState* play) {
